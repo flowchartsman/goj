@@ -5,6 +5,8 @@ no in-memory representation (that's your job).
 
 **goj** may be useful to you if the following are true:
 
+**note** this is a soft-fork of [lloyd/goj](https://github.com/lloyd/goj) to get some PRs I was interested in.
+
 1. you need fast json parsing
 2. you do not need a streaming parser (the distinct JSON documents you are parsing
    are delimited in some fasion)
@@ -15,7 +17,7 @@ no in-memory representation (that's your job).
 
 Installation:
 ```
-go get github.com/lloyd/goj
+go get github.com/flowchartsman/goj
 ```
 
 A program to extract and print the top level `.name` property from a json file passed in on stdin:
@@ -28,7 +30,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/lloyd/goj"
+	"github.com/flowchartsman/goj"
 )
 
 func main() {
@@ -71,13 +73,15 @@ faster than go's reflection based json parsing:
 
 ```
 $ go test -bench . -run 'XXX'
-goos: linux
+goos: darwin
 goarch: amd64
-pkg: github.com/lloyd/goj/test
-BenchmarkGojScanning-24                   300         4836167 ns/op       401.24 MB/s
-BenchmarkStdJSONScanning-24               100        13836559 ns/op       140.24 MB/s
+pkg: github.com/flowchartsman/goj
+cpu: Intel(R) Core(TM) i9-9980HK CPU @ 2.40GHz
+BenchmarkGojScanning-16                      325           3332903 ns/op         582.22 MB/s
+BenchmarkGojOffsetScanning-16                397           3156122 ns/op         614.83 MB/s
+BenchmarkStdJSONScanning-16                   98          10903834 ns/op         177.96 MB/s
 PASS
-ok      github.com/lloyd/goj/test       3.384s
+ok      github.com/flowchartsman/goj    5.180s
 ```
 
 See `test/bench_test.go` for the source.

@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/lloyd/goj"
+	"github.com/flowchartsman/goj"
 )
 
 func TestParserOffsetParse(t *testing.T) {

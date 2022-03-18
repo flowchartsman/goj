@@ -13,7 +13,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/lloyd/goj"
+	"github.com/flowchartsman/goj"
 )
 
 var codeJSON []byte

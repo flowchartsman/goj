@@ -9,7 +9,7 @@ import (
 	"runtime/pprof"
 	"time"
 
-	"github.com/lloyd/goj"
+	"github.com/flowchartsman/goj"
 )
 
 func main() {

@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/lloyd/goj"
+	"github.com/flowchartsman/goj"
 )
 
 type parseTestCase struct {

@@ -1,4 +1,4 @@
-module github.com/lloyd/goj
+module github.com/flowchartsman/goj
 
 go 1.16
 
